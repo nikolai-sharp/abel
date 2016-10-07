@@ -7,6 +7,7 @@ Created on Fri Sep 30 09:38:08 2016
 
 import numpy as np
 import matplotlib.pyplot as plt
+from scipy.optimize import brentq as br
 
 
 
@@ -81,7 +82,7 @@ def f4(theta): #function for fourth problem
     return N1s + N2s -p1s*Ds    
     
 
-def plot2(): #plots first function
+def graph2(): #plots first function
     th = np.arange(-np.pi,np.pi,.01)
     plt.plot(th,f1(th))
     plt.axis([-3.2,3.2,-500,33250])
@@ -94,7 +95,7 @@ def plot2(): #plots first function
     
     
 
-def plot4(): #plots function for fourth problem for visual verification of roots
+def graph4(): #plots function for fourth problem for visual verification of roots
     th = np.arange(-np.pi,np.pi,.01)
     plt.plot(th,f4(th))
     plt.axis([-3.2,3.2,-500,33250])
@@ -103,6 +104,74 @@ def plot4(): #plots function for fourth problem for visual verification of roots
     plt.ylabel('Function Value')
     plt.grid(True)
     plt.show()
+    
+    
+def plot3_1(): #plots figure 1.15(a)
+    b0 = [0,0]
+    b1 = [4,0]
+    b2 = [0,4]
+    v0 = [1,2]
+    v1 = [2,1]
+    v2 = [2,3]
+    
+    #x = [b0[0],b1[0],b2[0],v0[0],v1[0],v2[0]]
+    #y = [b0[1],b1[1],b2[1],v0[1],v1[1],v2[1]]
+    
+    plt.plot([v0[0],v1[0]],[v0[1],v1[1]],'b',lw=2)
+    plt.plot([v1[0],v2[0]],[v1[1],v2[1]],'b',lw=2)
+    plt.plot([v2[0],v0[0]],[v2[1],v0[1]],'b',lw=2)
+    
+    plt.plot([b0[0],v0[0]],[b0[1],v0[1]],'b',lw=2)
+    plt.plot([b1[0],v1[0]],[b1[1],v1[1]],'b',lw=2)
+    plt.plot([b2[0],v2[0]],[b2[1],v2[1]],'b',lw=2)
+    
+    plt.plot(b0[0],b0[1],'bo')
+    plt.plot(b1[0],b1[1],'bo')
+    plt.plot(b2[0],b2[1],'bo')
+    plt.plot(v0[0],v0[1],'bo')
+    plt.plot(v1[0],v1[1],'bo')
+    plt.plot(v2[0],v2[1],'bo')
+    
+    plt.axis([0,4,0,4])
+    plt.show()
+    
+    
+def plot3_2(): #plots figure 1.15(b)
+    b0 = [0,0]
+    b1 = [4,0]
+    b2 = [0,4]
+    v0 = [2,1]
+    v1 = [3,2]
+    v2 = [1,2]
+    
+    #x = [b0[0],b1[0],b2[0],v0[0],v1[0],v2[0]]
+    #y = [b0[1],b1[1],b2[1],v0[1],v1[1],v2[1]]
+    
+    plt.plot([v0[0],v1[0]],[v0[1],v1[1]],'b',lw=2)
+    plt.plot([v1[0],v2[0]],[v1[1],v2[1]],'b',lw=2)
+    plt.plot([v2[0],v0[0]],[v2[1],v0[1]],'b',lw=2)
+    
+    plt.plot([b0[0],v0[0]],[b0[1],v0[1]],'b',lw=2)
+    plt.plot([b1[0],v1[0]],[b1[1],v1[1]],'b',lw=2)
+    plt.plot([b2[0],v2[0]],[b2[1],v2[1]],'b',lw=2)
+    
+    plt.plot(b0[0],b0[1],'bo')
+    plt.plot(b1[0],b1[1],'bo')
+    plt.plot(b2[0],b2[1],'bo')
+    plt.plot(v0[0],v0[1],'bo')
+    plt.plot(v1[0],v1[1],'bo')
+    plt.plot(v2[0],v2[1],'bo')
+    
+    plt.axis([0,4,0,4])
+    plt.show()
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
