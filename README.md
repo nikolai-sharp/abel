@@ -1,5 +1,4 @@
-# This repoisitory contains the python file used for Abel's
-# MATH/CSCI4650-001 first group project.
+# This repoisitory contains the python file used for Abel's MATH/CSCI4650-001 first group project.
 
 
 f1(theta): completes function for problem 1. Has 2 roots  
