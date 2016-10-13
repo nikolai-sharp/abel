@@ -175,19 +175,20 @@ def plot4(r):
     #r is input. This allows this function to plot multiple positions
     if r==1:
         theta = br(f4,lBounds[0],rBounds[0])
-        #print root
+        
     elif r==2:
         theta = br(f4,lBounds[1],rBounds[1])
-        #print root
+        
     elif r==3:
         theta = br(f4,lBounds[2],rBounds[2])
-        #print root
+        
     elif r==4:
         theta = br(f4,lBounds[3],rBounds[3])
-        #print root
     else:
         print 'that was not a valid choice'
         return 0
+        
+    print theta
 
     l1 = 3.0
     l2 = 3*2**(1.0/2)
@@ -356,7 +357,6 @@ def plot5(r):
         #print root
     elif r==4:
         theta = br(f5,lBounds[3],rBounds[3])
-        #print root
     elif r==5:
         theta = br(f5,lBounds[4],rBounds[4])
     elif r==6:
@@ -366,6 +366,8 @@ def plot5(r):
         print 'that was not a valid choice'
         return 0
 
+    print theta
+    
     l1 = 3.0
     l2 = 3*(2**(1.0/2))
     l3 = l1
@@ -473,7 +475,7 @@ def graph6(): #plots function for fourth problem for visual verification of root
     th = np.arange(-np.pi,np.pi,.01)
     plt.plot(th,f6(th))
     plt.axis([-3.2,3.2,-500,33250])
-    plt.title('Problem 4 Graph')
+    plt.title('Problem 6 Graph')
     plt.xlabel('Theta')
     plt.ylabel('Function Value')
     plt.grid(True)
