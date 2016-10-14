@@ -339,7 +339,7 @@ def graph5(): #plots function for 5th problem for visual verification of roots
     plt.grid(True)
     plt.show()    
     
-def plot5(r): #operates the same way as plot4(r), but adds 2 cases for the extra roots
+def plot5(r): #operates the same way as plot4(r), but adds 2 cases for the extra roots... 
     lBounds = [-1,-.5,-.25,.25,.75,2.25] #left and right bounds for brents method of finding zeros
     rBounds = [-.5,-.25,.25,.75,1.25,2.75]
     
@@ -347,7 +347,7 @@ def plot5(r): #operates the same way as plot4(r), but adds 2 cases for the extra
     
     #this set of if/else statements defines theta based on which
     #r is input. This allows this function to plot multiple positions
-    if r==1:
+    if r==1:#case 1 gives strange lengths needs further investigation!!!
         theta = br(f4,lBounds[0],rBounds[0]) #uses brents method to calculate the roots. chosen due to ease of input
         #print root
     elif r==2:
@@ -586,7 +586,7 @@ def interval7():
 #STEWART PLATFORM-BASED ROBOTIC WRIST
 #CHARLES C. NGUYEN, 1 SAMI C. ANTRAZI, l ZHEN-LEI ZHOU l and
 #CHARLES E. CAMPBELL Jr 2
-def invk(alpha,beta,gamma,x,y,z):
+def invk(alpha,beta,gamma,x,y,z): #tested using x=0,y=0,z=0. was not able to verify, but much of this seems to work correctly
     #(17) from article. This finds orientation between the base and payload given pitch, yaw, and rotation
     R = np.matrix([[np.cos(alpha)*np.cos(beta), np.cos(alpha)*np.sin(beta)*np.sin(gamma)-np.sin(alpha)*np.cos(gamma),
                     np.cos(alpha)*np.sin(beta)*np.cos(gamma)+np.sin(alpha)*np.sin(gamma)],
